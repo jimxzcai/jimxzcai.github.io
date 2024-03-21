@@ -1789,7 +1789,7 @@ fieldset[disabled] .btn-template-primary.active {
   background-size: cover;
 }
 .bar.background-image-fixed-2 {
-  background: url('../img/fixed-background-3.jpg') center top no-repeat;
+  background: url('../img/fixed-background-2.jpg') center top no-repeat;
   background-attachment: fixed;
   background-size: cover;
 }
@@ -2595,12 +2595,6 @@ fieldset[disabled] .btn-template-primary.active {
   margin-left: 10px;
   display: table-cell;
   vertical-align: middle;
-}
-#footer .blog-entries .item .name h5 {
-  margin: 0;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 12px;
 }
 #footer .blog-entries .item .name h5 a {
   color: #eeeeee;

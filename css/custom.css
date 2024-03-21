@@ -11,3 +11,55 @@
 .box-simple {
   min-height: 230px;
 }
+
+.logo-font {
+  font-family: "Audiowide", sans-serif;
+  font-weight: 900;
+  line-height: 1.1;
+  color: green;
+}
+
+.box-image-text .content p {
+  color: #999999;
+  text-align: left;
+}
+
+.bar.background-image-fixed-2 {
+  background: url('../img/egoo-ev-charger-for-cardinng.jpg') center top no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+video {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding: 0px 0;
+}
+
+#footer h4 {
+  font-size: 14px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+#footer .blog-entries .item .image {
+  float: left;
+  width: 10%;
+  margin-right: 10px;
+}
+
+#footer .blog-entries .item .name {
+  width:50%;
+  margin-left: 10px;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+#footer .blog-entries .item .name h5 {
+  margin: 0;
+  letter-spacing: 0.08em;
+  font-size: 12px;
+}
