@@ -158,4 +158,8 @@ video {
       margin-right: -100px; /* 图片向右移动100px */
       object-position: 100% 0; /* 从右边100px开始截取 */
     }
+
+    .bar.background-image-fixed-2 {
+      background-attachment: scroll;
+    }
 }
