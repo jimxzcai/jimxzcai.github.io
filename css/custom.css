@@ -1,11 +1,12 @@
 .box-image-text .image {
-  min-height: 190px;
-  max-height: 190px;
+  max-height: 280px;
+  border-radius: 10px; /* 为四个角添加圆角，值可以根据需要进行调整 */
 }
 
 .box-image-text .image img {
-  max-height: 190px;
-  margin: auto
+  width: 100%; /* 图像宽度填充父元素 */
+  height: 100%; /* 图像高度填充父元素 */
+  object-fit: contain; /* 图像保持比例并填充整个容器 */
 }
 
 .box-simple {
@@ -35,6 +36,7 @@ video {
   height: auto;
   padding: 0px 0;
   border-radius: 10px; /* 为四个角添加圆角，值可以根据需要进行调整 */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* 阴影效果 */
 }
 
 #footer .blog-entries .item .image {

@@ -1255,6 +1255,9 @@ fieldset[disabled] .btn-template-primary.active {
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+  align-self: center;
+  width: 120px;
+  height: 120px;
 }
 .customers .item img:hover {
   max-width: auto;
@@ -1273,6 +1276,7 @@ fieldset[disabled] .btn-template-primary.active {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  border-radius: 10px; /* 边框圆角半径为 10px */
 }
 .testimonials .item .testimonial {
   position: relative;
@@ -1583,14 +1587,26 @@ fieldset[disabled] .btn-template-primary.active {
   transform: translate(0, 100%);
 }
 .box-image-text {
+  display: flex;
+  flex-direction: column;
   position: relative;
   overflow: hidden;
   text-align: center;
   margin: 15px 0;
+  border-radius: 10px; /* 边框圆角半径为 10px */
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  min-height: 550px;
+}
+.box-image-text .bottom {
+  width: 100%;
+  text-align: center;
+  align-self: end; /* 在垂直方向上底部对齐 */
+  margin-top: auto; /* 第三个 div 置底 */
+  margin-bottom: 5px; /* 与底部保持 10px 距离 */
 }
 .box-image-text .top {
   position: relative;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .box-image-text .top .bg {
   position: absolute;
@@ -1640,6 +1656,9 @@ fieldset[disabled] .btn-template-primary.active {
   transition: all 0.2s ease-out;
   color: #fff;
   padding: 0 20px;
+}
+.box-image-text .content {
+  margin-top: 10px; /* 例如，设置固定的距离为 20px */
 }
 .box-image-text .content h3,
 .box-image-text .content h4 {
@@ -2129,6 +2148,7 @@ fieldset[disabled] .btn-template-primary.active {
 #blog-listing-medium .post .image {
   margin-bottom: 10px;
   overflow: hidden;
+  border-radius: 10px; /* 边框圆角半径为 10px */
 }
 #blog-listing-medium .post .image img {
   -webkit-transition: all 0.2s ease-out;
