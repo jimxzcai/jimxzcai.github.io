@@ -5,7 +5,7 @@
 
 .box-image-text .image img {
   max-height: 190px;
-  margin: auto;
+  margin: auto
 }
 
 .box-simple {
@@ -20,8 +20,7 @@
 }
 
 .box-image-text .content p {
-  color: #999999;
-  text-align: left;
+  text-align: center;
 }
 
 .bar.background-image-fixed-2 {
@@ -162,4 +161,8 @@ video {
     .bar.background-image-fixed-2 {
       background-attachment: scroll;
     }
+}
+
+.gay-4 a {
+  margin-right: 10px;
 }

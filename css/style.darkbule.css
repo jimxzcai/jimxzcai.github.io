@@ -550,9 +550,9 @@ ul.list-style-none {
   border-radius: 0;
 }
 .btn-template-main {
-  color: var(--primary-accent);
-  background-color: #ffffff;
-  border-color: var(--primary-accent);
+  color: #ffff;
+  background-color: #3f657c;
+  border-radius: 20px; /* 为四个角添加圆角，值可以根据需要进行调整 */
 }
 .btn-template-main:hover,
 .btn-template-main:focus,
@@ -648,9 +648,9 @@ fieldset[disabled] .btn-template-transparent-primary.active {
   border-color: #fff;
 }
 .btn-template-transparent-black {
-  color: #ffffff;
-  background-color: transparent;
-  border-color: #ffffff;
+  color: #ffff;
+  background-color: #f4955a;
+  border-radius: 20px; /* 为四个角添加圆角，值可以根据需要进行调整 */
 }
 .btn-template-transparent-black:hover,
 .btn-template-transparent-black:focus,
@@ -1740,6 +1740,7 @@ fieldset[disabled] .btn-template-primary.active {
   padding: 20px 0;
   margin-bottom: 40px;
 }
+
 #heading-breadcrumbs.no-mb {
   margin-bottom: 0;
 }
@@ -1765,8 +1766,6 @@ fieldset[disabled] .btn-template-primary.active {
 }
 .bar.background-pentagon {
   background: url('../img/texture-bw.png') center center repeat;
-  border-top: solid 1px #999999;
-  border-bottom: solid 1px #999999;
 }
 .bar.background-gray {
   background: #eeeeee;
@@ -2536,6 +2535,9 @@ fieldset[disabled] .btn-template-primary.active {
   font-weight: 800;
   letter-spacing: 0.08em;
   text-align: center;
+  border-bottom: solid 2px #0d202f;
+  padding-bottom: .5rem;
+  text-transform: uppercase;
 }
 
 #footer ul {
@@ -2577,7 +2579,6 @@ fieldset[disabled] .btn-template-primary.active {
   clear: both;
   padding: 5px 0;
   margin-bottom: 10px;
-  border-bottom: solid 1px #555555;
 }
 #footer .blog-entries .item .image {
   float: left;

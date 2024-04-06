@@ -138,7 +138,7 @@ function sliders () {
 
 function imgSlider() {
   const slides = $(".image-slider .slide");
-  const blackBackground = $(".image-slider .black-background");
+  // const blackBackground = $(".image-slider .black-background");
   let index = 0;
 
   function showImage() {
@@ -150,12 +150,12 @@ function imgSlider() {
       $(slides[index]).find("img").addClass("active");
       $(slides[index]).find(".text-overlay").addClass("active");
 
-      blackBackground.css("opacity", "0").delay(3000).animate({ opacity: "1" }, 500);
+      // blackBackground.css("opacity", "0").delay(3000).animate({ opacity: "1" }, 500);
       index = (index + 1) % slides.length;
   }
 
   showImage();
-  setInterval(showImage, 5000); // Change slide every 5 seconds
+  setInterval(showImage, 4000); // Change slide every 5 seconds
 }
 
 /* menu sliding */
