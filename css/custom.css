@@ -16,7 +16,7 @@
   font-family: "Audiowide", sans-serif;
   font-weight: 900;
   line-height: 1.1;
-  color: green;
+  color: #0d202f;
 }
 
 .box-image-text .content p {
@@ -31,18 +31,11 @@
 }
 
 video {
-  width: 100%;
-  height: auto;
   position: relative;
+  width: 50%;
+  height: auto;
   padding: 0px 0;
-}
-
-#footer h4 {
-  font-size: 14px;
-  font-weight: 800;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  text-align: center;
+  border-radius: 10px; /* 为四个角添加圆角，值可以根据需要进行调整 */
 }
 
 #footer .blog-entries .item .image {
@@ -62,4 +55,107 @@ video {
   margin: 0;
   letter-spacing: 0.08em;
   font-size: 12px;
+}
+
+.image-slider {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* 设置图片容器的高度为100vh，占据整个屏幕高度 */
+  overflow: hidden;
+}
+
+/* 响应式设计 - 当屏幕宽度小于 600px 时，调整背景图片的位置 */
+@media (max-width: 600px) {
+  .image-slider {
+    background-size: auto; /* 恢复背景图片原始大小 */
+    background-position: top; /* 图片在元素中顶部对齐 */
+  }
+
+  video {
+    width: 100%;
+  }
+
+  .video-text{
+    text-align: center;
+  }
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.image-slider img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* 图片裁剪以适应容器 */
+  opacity: 0; /* 初始化所有图片的透明度为0 */
+  transition: opacity 0.5s ease; /* 设置透明度变化的过渡效果 */
+}
+
+.image-slider img.active {
+  opacity: 1; /* 设置当前活动图片的透明度为1，显示出来 */
+}
+
+.text-overlay {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translate(-10%, -50%); /* 将文字居中对齐并向左移动 */
+  color: white; /* 设置文字颜色为白色 */
+  text-align: left; /* 设置文字居中对齐 */
+  opacity: 0; /* 初始透明度为0 */
+  white-space: normal; /* 允许文字换行 */
+  transition: opacity 0.1s ease, transform 1s ease; /* 添加transform属性到过渡效果 */
+
+  font-family: 'Courier New';
+  font-weight: 400; /* 正常字体粗细 */
+  font-size: 30px; /* 设置文字大小 */
+  
+}
+
+.text-overlay h1 {
+  color: #f4955a; /* 设置文字颜色为白色 */
+  font-size: 50px; /* 设置文字大小 */
+  font-family: 'Lucida Console';
+  font-weight: 400; /* 正常字体粗细 */
+}
+
+.image-slider img.active + .text-overlay.active {
+  opacity: 1; /* 当前活动图片显示时，文字也显示 */
+  transform: translate(0, -50%); /* 将文字向左移动到完全显示 */
+}
+
+.black-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to top, #000000, #121b12); /* 从黑色渐变到墨绿色 */
+  opacity: 0; /* 初始透明度为0 */
+  transition: opacity 1s ease; /* 设置透明度变化的过渡效果 */
+}
+
+/* 增加媒体查询以适应手机屏幕 */
+@media only screen and (max-width: 768px) {
+    .text-overlay {
+      text-align: center;
+      font-size: 25px; /* 在手机屏幕上减小文字大小 */
+      left: 5%; /* 调整文字在手机屏幕上的位置 */
+    }  
+    .text-overlay h1 {
+      text-align: center;
+      font-size: 35px; /* 在手机屏幕上减小文字大小 */
+    }
+    .image-slider img {
+      object-fit: cover; /* 图片按比例缩放并填充图片容器 */
+      width: calc(100% + 100px); /* 图片宽度为图片容器宽度加上100px */
+      margin-right: -100px; /* 图片向右移动100px */
+      object-position: 100% 0; /* 从右边100px开始截取 */
+    }
 }

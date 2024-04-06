@@ -11,6 +11,7 @@ if ($.cookie('themeLayout')) {
 $(function () {
   sliderHomepage()
   sliders()
+  imgSlider()
   fullScreenContainer()
   productDetailGallery(4000)
   menuSliding()
@@ -133,6 +134,28 @@ function sliders () {
       }
     })
   }
+}
+
+function imgSlider() {
+  const slides = $(".image-slider .slide");
+  const blackBackground = $(".image-slider .black-background");
+  let index = 0;
+
+  function showImage() {
+      slides.each(function() {
+          $(this).find("img").removeClass("active");
+          $(this).find(".text-overlay").removeClass("active");
+      });
+
+      $(slides[index]).find("img").addClass("active");
+      $(slides[index]).find(".text-overlay").addClass("active");
+
+      blackBackground.css("opacity", "0").delay(3000).animate({ opacity: "1" }, 500);
+      index = (index + 1) % slides.length;
+  }
+
+  showImage();
+  setInterval(showImage, 5000); // Change slide every 5 seconds
 }
 
 /* menu sliding */
@@ -384,3 +407,5 @@ $(window).resize(function () {
     windowWidth = newWindowWidth
   }
 })
+
+
