@@ -36,7 +36,6 @@ video {
   height: auto;
   padding: 0px 0;
   border-radius: 10px; /* 为四个角添加圆角，值可以根据需要进行调整 */
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* 阴影效果 */
 }
 
 #footer .blog-entries .item .image {
@@ -167,4 +166,56 @@ video {
 
 .gay-4 a {
   margin-right: 10px;
+}
+
+#post-main-image {
+  width: 90%;
+  margin: 0 auto;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  border-radius: 10px; /* 为四个角添加圆角，值可以根据需要进行调整 */
+}
+.post-thumbnail {
+  width: 15%;
+  cursor: pointer;
+}
+
+.post-thumbnail img {
+  width: 100%;
+  display: block;
+  transition: filter 0.3s ease;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+  border-radius: 10px; /* 为四个角添加圆角，值可以根据需要进行调整 */
+}
+
+.post-thumbnails {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.post-thumbnail.blur img {
+  filter: blur(3px);
+}
+
+.post-title {
+  text-align: center;
+}
+
+
+/* 添加自定义样式 */
+.post-main .nav-tabs {
+  border: 0px solid transparent;
+  border-bottom: 1px solid #ddd;
+}
+.post-main .nav-link.active {
+  color: #0d202f !important;
+  border: 0px solid transparent !important;
+  border-bottom: 3px solid #0d202f !important;
+}
+.post-main .nav-link:not(.active) {
+  color: gray !important;
+}
+
+.post-main .tab-content {
+  padding: 10px;
 }

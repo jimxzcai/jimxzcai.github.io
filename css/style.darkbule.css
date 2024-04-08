@@ -1755,7 +1755,7 @@ fieldset[disabled] .btn-template-primary.active {
   border: none;
 }
 #heading-breadcrumbs {
-  background: url('../img/texture-bw.png') center center repeat;
+  background: url('../img/texture-darkbule.png') center center repeat;
   padding: 20px 0;
   margin-bottom: 40px;
 }
@@ -1764,7 +1764,7 @@ fieldset[disabled] .btn-template-primary.active {
   margin-bottom: 0;
 }
 #heading-breadcrumbs h1 {
-  color: #333333;
+  color: #ffff;
   font-size: 30px;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -1784,7 +1784,7 @@ fieldset[disabled] .btn-template-primary.active {
   padding: 60px 0;
 }
 .bar.background-pentagon {
-  background: url('../img/texture-bw.png') center center repeat;
+  background: url('../img/texture-darkbule.png') center center repeat;
 }
 .bar.background-gray {
   background: #eeeeee;
@@ -2164,7 +2164,12 @@ fieldset[disabled] .btn-template-primary.active {
   margin-bottom: 10px;
 }
 #blog-listing-medium .post .read-more {
-  text-align: right;
+  text-align: left;
+}
+@media (max-width: 767px) {
+  #blog-listing-medium .post .read-more {
+    text-align: center;
+  }
 }
 .box-image-text.blog .author-category {
   color: #999999;
