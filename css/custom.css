@@ -5,8 +5,8 @@
 
 .box-image-text .image img {
   width: 100%; /* 图像宽度填充父元素 */
-  height: 100%; /* 图像高度填充父元素 */
-  object-fit: contain; /* 图像保持比例并填充整个容器 */
+  height: 200px; /* 图像高度填充父元素 */
+  object-fit: cover; /* 图像保持比例并填充整个容器 */
 }
 
 .box-simple {
@@ -173,18 +173,26 @@ video {
   margin: 0 auto;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
   border-radius: 10px; /* 为四个角添加圆角，值可以根据需要进行调整 */
+  object-fit: contain; /* 图片裁剪以适应容器 */
 }
+#post-main-image img {
+  height: 300px;
+}
+
 .post-thumbnail {
-  width: 15%;
+  width: 10%;
   cursor: pointer;
+  margin-right: 20px;
 }
 
 .post-thumbnail img {
-  width: 100%;
+  width: 100px;
+  height: 100px;
   display: block;
   transition: filter 0.3s ease;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
   border-radius: 10px; /* 为四个角添加圆角，值可以根据需要进行调整 */
+  object-fit: contain;
 }
 
 .post-thumbnails {
