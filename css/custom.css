@@ -141,29 +141,6 @@ video {
   transition: opacity 1s ease; /* 设置透明度变化的过渡效果 */
 }
 
-/* 增加媒体查询以适应手机屏幕 */
-@media only screen and (max-width: 768px) {
-    .text-overlay {
-      text-align: center;
-      font-size: 25px; /* 在手机屏幕上减小文字大小 */
-      left: 5%; /* 调整文字在手机屏幕上的位置 */
-    }  
-    .text-overlay h1 {
-      text-align: center;
-      font-size: 35px; /* 在手机屏幕上减小文字大小 */
-    }
-    .image-slider img {
-      object-fit: cover; /* 图片按比例缩放并填充图片容器 */
-      width: calc(100% + 100px); /* 图片宽度为图片容器宽度加上100px */
-      margin-right: -100px; /* 图片向右移动100px */
-      object-position: 100% 0; /* 从右边100px开始截取 */
-    }
-
-    .bar.background-image-fixed-2 {
-      background-attachment: scroll;
-    }
-}
-
 .gay-4 a {
   margin-right: 10px;
 }
@@ -226,4 +203,31 @@ video {
 
 .post-main .tab-content {
   padding: 10px;
+}
+
+/* 增加媒体查询以适应手机屏幕 */
+@media only screen and (max-width: 768px) {
+  .text-overlay {
+    text-align: center;
+    font-size: 25px; /* 在手机屏幕上减小文字大小 */
+    left: 5%; /* 调整文字在手机屏幕上的位置 */
+  }  
+  .text-overlay h1 {
+    text-align: center;
+    font-size: 35px; /* 在手机屏幕上减小文字大小 */
+  }
+  .image-slider img {
+    object-fit: cover; /* 图片按比例缩放并填充图片容器 */
+    width: calc(100% + 100px); /* 图片宽度为图片容器宽度加上100px */
+    margin-right: -100px; /* 图片向右移动100px */
+    object-position: 100% 0; /* 从右边100px开始截取 */
+  }
+
+  .bar.background-image-fixed-2 {
+    background-attachment: scroll;
+  }
+ 
+  .post-thumbnail img {
+    height: 50px;
+  }
 }
